@@ -93,6 +93,25 @@ i {
 
 /*----------bootstrap-navbar-css------------*/
 
+.btn-hamburger{
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+  border: none;
+}
+
+.btn-hamburger .hamburger-icon {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+}
+
+
 .navbar-logo {
   padding: 15px;
   color: #fff;
@@ -197,6 +216,8 @@ i {
   bottom: 0;
   left: -25px;
 }
+
+
 
 
 
