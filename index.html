@@ -36,10 +36,6 @@
     <!-- Your main stylesheet should go after framework CSS for overrides -->
     <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- jQuery (defer non-critical scripts if possible) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
     <!-- Data Scripts -->
     <script src="./js/data.js" defer></script>
 </head>
@@ -47,7 +43,7 @@
 <body>
 
     <!-- Header Section -->
-    <header class="header position-fixed top-0 z-3 w-100">
+    <header class="header position-sticky top-0 z-3 w-100">
         <div class="container">
 
             <nav class="navbar navbar-expand-xl navbar-mainbg">
@@ -65,25 +61,32 @@
                             <div class="right"></div>
                         </div>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-house"></i>Home</a>
+                            <a class="nav-link fw-medium" href="#overview-content"><i
+                                    class="fa-solid fa-house"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="far fa-address-book"></i>About Me</a>
+                            <a class="nav-link fw-medium" href="#about-content"><i class="far fa-address-book"></i>About
+                                Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-gears"></i>Skills</a>
+                            <a class="nav-link fw-medium" href="#skills-content"><i
+                                    class="fa-solid fa-gears"></i>Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="far fa-clone"></i>Projects</a>
+                            <a class="nav-link fw-medium" href="#projects-content"><i
+                                    class="far fa-clone"></i>Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-user-graduate"></i>Education</a>
+                            <a class="nav-link fw-medium" href="#education-content"><i
+                                    class="fa-solid fa-user-graduate"></i>Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-trophy"></i>Achievements</a>
+                            <a class="nav-link fw-medium" href="#achievements-content"><i
+                                    class="fa-solid fa-trophy"></i>Achievements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-circle-info"></i>Contact</a>
+                            <a class="nav-link fw-medium" href="#contact-content"><i
+                                    class="fa-solid fa-circle-info"></i>Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -93,9 +96,9 @@
 
 
     <!-- Main Content -->
-    <main class="main-content pt-5">
-        <section class="overview-section">
-            <div class="container my-4 p-3">
+    <main class="main-content">
+        <section class="overview-section" id="overview-content">
+            <div class="container pt-3 pb-5">
                 <div class="row g-3 align-items-stretch h-100">
                     <!-- Column 1: Main Profile Image -->
                     <div class="col-md-5 col-12">
@@ -111,7 +114,8 @@
                             <div class="col-12">
                                 <div class="item text-center p-4 h-100 d-flex flex-column justify-content-center">
                                     <h1 class="mb-2 user-name">Tarun Patil</h1>
-                                    <p class="mb-0">Aspiring Full Stack Java Developer and B.E. in Computer Engineering
+                                    <p class="mb-0 intro">Aspiring Full Stack Java Developer and B.E. in Computer
+                                        Engineering
                                     </p>
                                 </div>
                             </div>
@@ -147,8 +151,9 @@
                         <div class="item flex-fill p-4 d-flex flex-column justify-content-start align-items-start">
                             <h5><i class="fa-solid fa-certificate"></i>Certification</h5>
                             <p class="lc-4">
-                                Certified in Java Full Web Development from Envision Computer Training Institute Pvt.
-                                Ltd.
+                                Certified in Java Full Web Development from <strong>Envision Computer Training Institute
+                                    Pvt.
+                                    Ltd.</strong>
                             </p>
                             <a href="https://ecti.co.in/" target="_blank" class="">See more</a>
                         </div>
@@ -171,12 +176,245 @@
                 </div>
             </div>
         </section>
+
+        <section class="about-section" id="about-content">
+            <div class="container py-5">
+                <div class="row g-3 g-lg-5 align-items-center justify-content-center">
+                    <div
+                        class="order-1 order-md-0 col-xl-5 col-md-6 col-12 about-content mt-4 mt-md-0 d-flex flex-column justify-content-center align-items-center">
+                        <h2>About Me</h2>
+                        <p class="mt-3 text-center">
+                            I'm a passionate <strong>Full Stack Developer</strong> with a focus on building responsive,
+                            scalable web applications. I'm currently deepening my JavaScript skills and love working
+                            across both frontend and backend to turn ideas into complete, user-friendly solutions. From
+                            designing intuitive interfaces to developing robust server-side logic, I strive to deliver
+                            clean, efficient, and impactful digital experiences.
+                        </p>
+                        <div class="mt-4 d-flex flex-wrap justify-content-center gap-3">
+                            <a href="#" class="social-icons bg-light p-2 rounded-circle"><img src="./assets/illustration/icons-svg/linkedin-original.svg" alt="LinkedIn"></a>
+                            <a href="#" class="social-icons bg-light p-2 rounded-circle"><img src="./assets/illustration/icons-svg/github-original.svg" alt="LinkedIn"></a>
+                            <a href="#" class="social-icons bg-light p-2 rounded-circle"><img src="./assets/illustration/icons-svg/leetcode-original.svg" alt="LinkedIn"></a>
+                        </div>
+
+                    </div>
+
+                    <div class="order-0 order-md-1 col-xl-4 col-md-6 col-12 glass">
+                        <img src="./assets/illustration/user.jpg" alt="Tarun Profile" class="img-fluid about-image" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills-content">
+            <div class="container py-5">
+                <div class="row g-3 align-items-center justify-content-center">
+                    <div class="col-12 text-center mb-0">
+                        <h2>Skills</h2>
+                        <p>My technical skills and expertise in various technologies.</p>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center">
+                        <div class="col">
+                            <div class="card h-100 text-center border-0 shadow-sm glass-card py-2">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="./assets/illustration/icons-svg/html5-original.svg" alt="HTML5"
+                                        class="skills-icon">
+                                    <h6 class="mt-3 mb-0">HTML5</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 text-center border-0 shadow-sm glass-card py-2">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="./assets/illustration/icons-svg/css3-original.svg" alt="CSS3"
+                                        class="skills-icon">
+                                    <h6 class="mt-3 mb-0">CSS3</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 text-center border-0 shadow-sm glass-card py-2">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="./assets/illustration/icons-svg/javascript-original.svg" alt="JavaScript"
+                                        class="skills-icon">
+                                    <h6 class="mt-3 mb-0">JavaScript</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 text-center border-0 shadow-sm glass-card py-2">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="./assets/illustration/icons-svg/bootstrap-original.svg" alt="Bootstrap"
+                                        class="skills-icon">
+                                    <h6 class="mt-3 mb-0">Bootstrap</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects-content">
+            <div class="container ">
+                <div class="row g-3 align-items-center justify-content-center py-5">
+                    <div class="col-12 text-center">
+                        <h2>Projects</h2>
+                        <p>Here are some of the projects I've worked on.</p>
+                        <!-- Add your projects content here -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide d-flex flex-column align-items-center text-overlay-card">
+                                    <div class="project-image-container position-relative overflow-hidden mb-3">
+                                        <img src="./assets/illustration/projects-img/project-1.png" alt="Project 1"
+                                            class="img-fluid w-100 h-100 object-fit-cover">
+                                        <a href="#">
+                                            <div class="gradient-overlay"></div>
+                                        </a>
+                                        <div class="text-overlay position-absolute bottom-0 text-white p-3 w-100">
+                                            <h5 class="mb-1">Project 1</h5>
+                                            <a href="#" class="d-block">Brief description of Project 1.</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide d-flex flex-column align-items-center">
+                                    <div class="project-image-container position-relative overflow-hidden mb-3">
+                                        <img src="./assets/illustration/projects-img/project-2.png" alt="Project 2"
+                                            class="img-fluid w-100 h-100 object-fit-cover">
+                                        <a href="#">
+                                            <div class="gradient-overlay"></div>
+                                        </a>
+                                        <div class="text-overlay position-absolute bottom-0 text-white p-3 w-100">
+                                            <h5 class="mb-1">Project 2</h5>
+                                            <a href="#" class="d-block">Brief description of Project 2.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-flex flex-column align-items-center">
+                                    <div class="project-image-container position-relative overflow-hidden mb-3">
+                                        <img src="./assets/illustration/projects-img/project-3.png" alt="Project 1"
+                                            class="img-fluid w-100 h-100 object-fit-cover">
+                                        <a href="#">
+                                            <div class="gradient-overlay"></div>
+                                        </a>
+                                        <div class="text-overlay position-absolute bottom-0 text-white p-3 w-100">
+                                            <h5 class="mb-1">Project 3</h5>
+                                            <a href="#" class="d-block">Brief description of Project 3.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-flex flex-column align-items-center">
+                                    <div class="project-image-container position-relative overflow-hidden mb-3">
+                                        <img src="./assets/illustration/projects-img/project-4.png" alt="Project 4"
+                                            class="img-fluid w-100 h-100 object-fit-cover">
+                                        <a href="#">
+                                            <div class="gradient-overlay"></div>
+                                        </a>
+                                        <div class="text-overlay position-absolute bottom-0 text-white p-3 w-100">
+                                            <h5 class="mb-1">Project 4</h5>
+                                            <a href="#" class="d-block">Brief description of Project 4.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-flex flex-column align-items-center">
+                                    <div class="project-image-container position-relative overflow-hidden mb-3">
+                                        <img src="./assets/illustration/projects-img/project-5.png" alt="Project 5"
+                                            class="img-fluid w-100 h-100 object-fit-cover">
+                                        <a href="#">
+                                            <div class="gradient-overlay"></div>
+                                        </a>
+                                        <div class="text-overlay position-absolute bottom-0 text-white p-3 w-100">
+                                            <h5 class="mb-1">Project 5</h5>
+                                            <a href="#" class="d-block">Brief description of Project 5.</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="education-section" id="education-content">
+            <div class="container ">
+                <div class="row g-3 align-items-center justify-content-center py-5">
+                    <div class="col-12 text-center">
+                        <h2>Education</h2>
+                        <p>My educational background and qualifications.</p>
+                        <!-- Add your education content here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements-section" id="achievements-content">
+            <div class="container ">
+                <div class="row g-3 align-items-center justify-content-center py-5">
+                    <div class="col-12 text-center">
+                        <h2>Achievements</h2>
+                        <p>My accomplishments and certifications.</p>
+                        <!-- Add your achievements content here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact-content">
+            <div class="container">
+                <div class="row g-3 align-items-center justify-content-center py-5">
+                    <div class="col-12 text-center">
+                        <!-- Add your contact content here -->
+                        <div class="row g-3 align-items-center justify-content-center text-start py-5">
+                            <div class="col-md-8 col-12">
+                                <form id="contact-form" class="glass p-4">
+                                    <h2 class="text-center">Contact</h2>
+                                    <p class="text-center">Get in touch with me for collaboration or opportunities.</p>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name:</label>
+                                        <input type="text" class="form-control p-2" id="name" name="name" placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email:</label>
+                                        <input type="email" class="form-control p-2" id="email" name="email" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Subject:</label>
+                                        <input type="text" class="form-control p-2" id="subject" name="subject" placeholder="Enter the subject" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message:</label>
+                                        <textarea class="form-control p-2" id="message" name="message" rows="4"
+                                            placeholder="Enter your message" required></textarea>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <button type="submit" class="btn btn-submit align-items-center">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
 
     <!-- Footer Section -->
-    <footer>
-
+    <footer class="footer border-top">
+        <div class="container">
+            <div class="row g-3 align-items-center justify-content-center py-3">
+                <div class="col-12 text-center d-flex justify-content-center align-items-center gap-2">
+                    <a href="#"><img src="./assets/illustration/logo/Logo.png" alt="" class="img-fluid"></a>
+                    <p>&copy; 2025 Tarun Patil. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
 
