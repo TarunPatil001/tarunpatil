@@ -160,7 +160,7 @@ document.addEventListener('click', function (event) {
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
-  mousewheel: true,
+//   mousewheel: true,
   freeMode: true,
   pagination: {
     el: ".swiper-pagination",
