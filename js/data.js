@@ -8,8 +8,8 @@ window.apiData = {
 
   aboutData: {
     fullname: "Tarun Patil",
-    profile_img: "../assets/illustration/profile-pic.jpg",
-    custom_img_for_about: "../assets/illustration/pic2.png",
+    profile_img: "./assets/illustration/profile-pic.jpg",
+    custom_img_for_about: "./assets/illustration/pic2.png",
     intro:
       "Aspiring Full Stack Java Developer and B.E. in Computer Engineering",
     description:
@@ -20,17 +20,17 @@ window.apiData = {
     {
       platform: "LinkedIn",
       url: "https://www.linkedin.com/in/tarunpatil001/",
-      logo: "../assets/illustration/icons-svg/linkedin-original.svg",
+      logo: "./assets/illustration/icons-svg/linkedin-original.svg",
     },
     {
       platform: "GitHub",
       url: "https://github.com/TarunPatil001",
-      logo: "../assets/illustration/icons-svg/github-original.svg",
+      logo: "./assets/illustration/icons-svg/github-original.svg",
     },
     {
       platform: "LeetCode",
       url: "https://leetcode.com/tarunpatil001",
-      logo: "../assets/illustration/icons-svg/leetcode-original.svg",
+      logo: "./assets/illustration/icons-svg/leetcode-original.svg",
     },
     // Add more social media platforms if needed
   ],
@@ -38,19 +38,19 @@ window.apiData = {
   skills: [
     {
       technology: "HTML5",
-      logo: "../assets/illustration/icons-svg/html5-original.svg",
+      logo: "./assets/illustration/icons-svg/html5-original.svg",
     },
     {
       technology: "CSS3",
-      logo: "../assets/illustration/icons-svg/css3-original.svg",
+      logo: "./assets/illustration/icons-svg/css3-original.svg",
     },
     {
       technology: "JavaScript",
-      logo: "../assets/illustration/icons-svg/javascript-original.svg",
+      logo: "./assets/illustration/icons-svg/javascript-original.svg",
     },
     {
       technology: "Bootstrap 5",
-      logo: "../assets/illustration/icons-svg/bootstrap-original.svg",
+      logo: "./assets/illustration/icons-svg/bootstrap-original.svg",
     },
     // Add more skills if needed
   ],
@@ -60,31 +60,31 @@ window.apiData = {
       title: "Food Website Template Food Website Template Food Website Template",
       tech: ["HTML5", "CSS3"],
       link: "https://03-food-template.netlify.app/",
-      imgUrl: "../assets/illustration/projects/food-website-template.png"
+      imgUrl: "./assets/illustration/projects/food-website-template.png"
     },
     {
       title: "Fashion Website Template",
       tech: ["HTML5", "CSS3"],
       link: "https://04-fashion-template.netlify.app/",
-      imgUrl: "../assets/illustration/projects/fashion-website-template.png"
+      imgUrl: "./assets/illustration/projects/fashion-website-template.png"
     },
     {
       title: "Automobile Website Template",
       tech: ["HTML5", "CSS3", "Bootstrap5"],
       link: "https://05-automobile-services-template.netlify.app/",
-      imgUrl: "../assets/illustration/projects/automobile-website-template.png"
+      imgUrl: "./assets/illustration/projects/automobile-website-template.png"
     },
     {
       title: "Educational Website Template",
       tech: ["HTML5", "CSS3", "Bootstrap5"],
       link: "https://06-education-template.netlify.app/",
-      imgUrl: "../assets/illustration/projects/education-website-template.png"
+      imgUrl: "./assets/illustration/projects/education-website-template.png"
     },
     {
       title: "Fitness & Nutrition Website Template",
       tech: ["HTML5", "CSS3", "Bootstrap5"],
       link: "https://07-fitness-nutrition-template.netlify.app/",
-      imgUrl: "../assets/illustration/projects/fitness-nutrition-website-template.png"
+      imgUrl: "./assets/illustration/projects/fitness-nutrition-website-template.png"
     },
     // Add more projects if needed
   ],
