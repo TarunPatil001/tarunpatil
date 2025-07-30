@@ -7,7 +7,7 @@ const navbarLogoContainer = document.getElementById("navbar-logo-container");
 if (navbarLogoContainer && settings && profileData) {
    navbarLogoContainer.innerHTML = `
     <a href="${settings.rootDirectory}" aria-label="Go to homepage">
-      <img src="${settings.logo}" alt="${profileData.fullname || 'Tarun Patil'} Logo" class="img-fluid">
+      <img src="${settings.logo}" alt="${profileData.fullname || 'Tarun Patil'} Logo" class="img-fluid" loading="lazy">
     </a>
   `;
 }
@@ -35,7 +35,7 @@ if (container && profileData) {
    container.innerHTML = `
     <img src="${profileData.profile_img}" 
     alt="${profileData.fullname || "Profile Image"}" 
-    class="profile-img">
+    class="profile-img" loading="lazy">
     `;
 }
 
@@ -56,7 +56,7 @@ const achievementsContainer1 = document.getElementById(
 if (achievementsContainer1 && achievements[0]) {
    achievementsContainer1.innerHTML = `
     <div class="item p-0 item2">
-    <img src="${achievements[0].imgUrl}" alt="${achievements[0].title}" class="item-img">
+    <img src="${achievements[0].imgUrl}" alt="${achievements[0].title}" class="item-img" loading="lazy">
     </div>
     `;
 }
@@ -68,7 +68,7 @@ const achievementsContainer2 = document.getElementById(
 if (achievementsContainer2 && achievements[1]) {
    achievementsContainer2.innerHTML = `
     <div class="item p-0 item2">
-      <img src="${achievements[1].imgUrl}" alt="${achievements[1].title}" class="item-img">
+      <img src="${achievements[1].imgUrl}" alt="${achievements[1].title}" class="item-img" loading="lazy">
     </div>
   `;
 }
@@ -130,7 +130,7 @@ if (socialIconsContainer && socialMediaData.length > 0) {
       .map(
          (link) => `
         <a href="${link.url}" target="_blank" class="social-icons bg-light p-2 rounded-circle">
-            <img src="${link.logo}" alt="${link.platform}" />
+            <img src="${link.logo}" alt="${link.platform}" class="img-fluid" loading="lazy">
         </a>
     `
       )
@@ -160,7 +160,7 @@ if (skillsContainer) {
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm glass-card py-2">
           <div class="card-body d-flex flex-column align-items-center">
-            <img src="${skill.logo}" alt="${skill.technology}" class="skills-icon">
+            <img src="${skill.logo}" alt="${skill.technology}" class="skills-icon img-fluid" loading="lazy">
             <h6 class="mt-3 mb-0">${skill.technology}</h6>
           </div>
         </div>
@@ -184,7 +184,7 @@ if (projectsContainer && projectsData.length > 0) {
     <div id="project-${index}" class="swiper-slide d-flex flex-column align-items-center text-overlay-card">
       <div class="project-image-container position-relative overflow-hidden mb-3">
         <img src="${project.imgUrl}" alt="${project.title
-        }" class="img-fluid w-100 h-100 object-fit-cover">
+        }" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
         <div class="gradient-overlay d-flex justify-content-center align-items-center">
           <a href="${project.link
         }" target="_blank" class="btn btn-outline-primary btn-project text-decoration-none">
@@ -307,12 +307,11 @@ if (certificatesContainerOrg && certificatesData.length > 0) {
             <span class="badge bg-warning position-absolute top-0 start-0 z-1 mt-2 ms-2">Overview</span>
           ` : ""}
                                         <img src="${certificate.imgUrl}"
-                                            alt="Certificate 1" class="img-fluid w-100 h-100 object-fit-cover">
+                                            alt="Certificate 1" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
                                         <a href="${certificate.link}" target="_blank">
                                             <div class="gradient-overlay"></div>
                                         </a>
                                         <div class="text-overlay position-absolute bottom-0 text-white p-3 w-100">
-                                            
                                             <a href="${certificate.link}" target="_blank" class="lc-1">${certificate.title}</a>
                                         </div>
                                     </div>

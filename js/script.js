@@ -1,3 +1,4 @@
+// JavaScript for smooth scrolling and active nav item highlighting
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("#navbarSupportedContent .nav-link");
     const sections = document.querySelectorAll('section[id$="-content"]');

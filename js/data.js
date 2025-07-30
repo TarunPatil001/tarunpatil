@@ -60,31 +60,31 @@ window.apiData = {
       title: "Food Website Template Food Website Template Food Website Template",
       tech: ["HTML5", "CSS3"],
       link: "https://03-food-template.netlify.app/",
-      imgUrl: "./assets/illustration/projects/food-website-template.png"
+      imgUrl: "./assets/illustration/projects/food-website-template.jpg"
     },
     {
       title: "Fashion Website Template",
       tech: ["HTML5", "CSS3"],
       link: "https://04-fashion-template.netlify.app/",
-      imgUrl: "./assets/illustration/projects/fashion-website-template.png"
+      imgUrl: "./assets/illustration/projects/fashion-website-template.jpg"
     },
     {
       title: "Automobile Website Template",
       tech: ["HTML5", "CSS3", "Bootstrap5"],
       link: "https://05-automobile-services-template.netlify.app/",
-      imgUrl: "./assets/illustration/projects/automobile-website-template.png"
+      imgUrl: "./assets/illustration/projects/automobile-website-template.jpg"
     },
     {
       title: "Educational Website Template",
       tech: ["HTML5", "CSS3", "Bootstrap5"],
       link: "https://06-education-template.netlify.app/",
-      imgUrl: "./assets/illustration/projects/education-website-template.png"
+      imgUrl: "./assets/illustration/projects/education-website-template.jpg"
     },
     {
       title: "Fitness & Nutrition Website Template",
       tech: ["HTML5", "CSS3", "Bootstrap5"],
       link: "https://07-fitness-nutrition-template.netlify.app/",
-      imgUrl: "./assets/illustration/projects/fitness-nutrition-website-template.png"
+      imgUrl: "./assets/illustration/projects/fitness-nutrition-website-template.jpg"
     },
     // Add more projects if needed
   ],
