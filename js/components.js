@@ -88,7 +88,7 @@ const certInfoContainer = document.getElementById("certification-info");
 if (certInfoContainer && certInfo) {
    certInfoContainer.innerHTML = `
     <p class="lc-4" id="certification-info">Certified in ${certInfo.title || "Certification Title"
-    } from <strong>${certInfo.institution || "Institution Name"}</strong></p>
+      } from <strong>${certInfo.institution || "Institution Name"}</strong></p>
     <a href="${certInfo.link || "#"}" target="_blank" class="">See more</a>
   `;
 }
@@ -179,26 +179,26 @@ const projectsContainer = document.getElementById("projects-container");
 
 if (projectsContainer && projectsData.length > 0) {
    projectsContainer.innerHTML = projectsData
+      .slice()
+      .reverse()
       .map(
          (project, index) => `
     <div id="project-${index}" class="swiper-slide d-flex flex-column align-items-center text-overlay-card">
       <div class="project-image-container position-relative overflow-hidden mb-3">
         <img src="${project.imgUrl}" alt="${project.title
-        }" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+            }" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
         <div class="gradient-overlay d-flex justify-content-center align-items-center">
           <a href="${project.link
-        }" target="_blank" class="btn btn-outline-primary btn-project text-decoration-none">
+            }" target="_blank" class="btn btn-outline-primary btn-project text-decoration-none">
             View Project
           </a>
         </div>
         <div class="text-overlay position-absolute bottom-0 text-white p-3 w-100 d-flex flex-column align-items-center gap-2">
-          <a href="${project.link}" target="_blank" class="lc-1">${String(
-          index + 1
-        ).padStart(2, "0")}. ${project.title}</a>
+          <a href="${project.link}" target="_blank" class="lc-1">${project.title}</a>
           <div class="d-flex flex-wrap gap-1 justify-content-center">
           ${project.tech
-          .map((tech) => `<span class="badge bg-primary">${tech}</span>`)
-          .join("")}
+               .map((tech) => `<span class="badge bg-primary">${tech}</span>`)
+               .join("")}
         </div>
         </div>
       </div>

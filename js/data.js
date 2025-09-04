@@ -13,7 +13,7 @@ window.apiData = {
     intro:
       "Aspiring Full Stack Java Developer and B.E. in Computer Engineering",
     description:
-      "I'm a passionate Full Stack Developer focused on crafting responsive and scalable web applications. I’m currently sharpening my JavaScript skills and enjoy working on both frontend and backend to transform ideas into complete, user-friendly products. From creating sleek, intuitive UIs to developing solid backend logic, I aim to build clean, efficient, and impactful digital solutions that truly enhance user experiences.",
+      "I'm a passionate Fullstack Java developer focused on building scalable, maintainable backend systems; currently working on backend skills and deepening expertise in Java, Spring Boot, REST APIs, databases, microservices, and cloud deployments to transform ideas into robust, secure server-side solutions that prioritize performance, clean code, and long-term maintainability.",
     },
 
   socialMediaData: [
@@ -52,6 +52,18 @@ window.apiData = {
       technology: "Bootstrap 5",
       logo: "./assets/illustration/icons-svg/bootstrap-original.svg",
     },
+    {
+      technology: "JQuery",
+      logo: "./assets/illustration/icons-svg/jquery-original.svg",
+    },
+    {
+      technology: "React JS",
+      logo: "./assets/illustration/icons-svg/react-original.svg",
+    },
+    {
+      technology: "React Router",
+      logo: "./assets/illustration/icons-svg/reactrouter-original.svg",
+    },
     // Add more skills if needed
   ],
 
@@ -86,6 +98,30 @@ window.apiData = {
       link: "https://07-fitness-nutrition-template.netlify.app/",
       imgUrl: "./assets/illustration/projects/fitness-nutrition-website-template.jpg"
     },
+    {
+      title: "Javascript Dom Template",
+      tech: ["VanillaJS"],
+      link: "https://08-dom-template.netlify.app/",
+      imgUrl: "./assets/illustration/projects/dom-template.png"
+    },
+    {
+      title: "Blog Template",
+      tech: ["React JS", "Bootstrap 5"],
+      link: "https://react-template-001-blog-template.netlify.app/",
+      imgUrl: "./assets/illustration/projects/blog-template.png"
+    },
+    {
+      title: "Real Estate Template",
+      tech: ["React JS", "React Router", "Bootstrap 5"],
+      link: "https://react-template-002-real-estate.netlify.app/",
+      imgUrl: "./assets/illustration/projects/real-estate-template.png"
+    },
+    {
+      title: "Expense Tracker Template",
+      tech: ["React JS", "React Router", "Tailwind CSS"],
+      link: "https://react-expense-tracker-dashboard.netlify.app/",
+      imgUrl: "./assets/illustration/projects/dashboard.png"
+    },
     // Add more projects if needed
   ],
 
@@ -96,7 +132,7 @@ window.apiData = {
       location: "Pune",
       university: "Savitribai Phule Pune University",
       gradeType: "CGPA",
-      grade: "8.0",
+      grade: "8.2",
       year: "2021 - 2024",
     },
     {
@@ -156,7 +192,7 @@ window.apiData = {
   ],
 
   workUpdate: {
-    description: "Currently learning JavaScript to strengthen my frontend fundamentals. Focused on mastering DOM manipulation, functions, and modern ES6+ concepts.",
+    description: "Currently enhancing my expertise in Core Java backend development. Actively mastering advanced Java concepts, object-oriented programming principles, and building robust server-side applications.",
   },
 
   certInfo: {
@@ -167,7 +203,7 @@ window.apiData = {
   },
 
   successfullProjects: {
-    description: "Designed and developed 5 responsive, user-friendly frontend projects focused on clean UI and seamless UX."
+    description: "Developed responsive, user-friendly frontend projects with an emphasis on clean UI design and seamless user experience."
   },
 
 };
