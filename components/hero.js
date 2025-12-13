@@ -36,25 +36,19 @@ const HeroComponent = {
                         <span>${personal.availability}</span>
                     </div>
                     <p class="hero-text">${hero.tagline}</p>
-                    <div class="hero-btns mt-4">
-                        <a href="${hero.ctaButtons.primary.link}" class="btn btn-primary btn-lg btn-neon magnetic-btn me-3">
-                            <span class="btn-text">${hero.ctaButtons.primary.text}</span>
-                            <span class="btn-icon"><i class="${hero.ctaButtons.primary.icon}"></i></span>
-                        </a>
-                        <a href="${personal.resumeLink}" class="btn btn-outline-light btn-lg btn-glass magnetic-btn">
-                            <span class="btn-text">${hero.ctaButtons.secondary.text}</span>
-                            <span class="btn-icon"><i class="${hero.ctaButtons.secondary.icon}"></i></span>
-                        </a>
-                        <button id="openTerminalBtn" class="btn btn-dark btn-lg btn-glass magnetic-btn ms-3" aria-label="Open Terminal">
-                            <span class="btn-text">_Terminal</span>
-                            <span class="btn-icon"><i class="fas fa-terminal text-success"></i></span>
-                        </button>
-                    </div>
-                    <!-- Social Links in Hero -->
-                    <div class="hero-social mt-5">
-                        <a href="${social.linkedin}" class="hero-social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="${social.github}" class="hero-social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="${social.email}" class="hero-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <div class="hero-cta-wrapper">
+                        <!-- Social Links in Hero -->
+                        <div class="hero-social">
+                            <a href="${social.linkedin}" class="hero-social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="${social.github}" class="hero-social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="${social.email}" class="hero-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="hero-btns">
+                            <a href="${hero.ctaButtons.primary.link}" class="btn btn-primary btn-lg btn-neon magnetic-btn">
+                                <span class="btn-text">${hero.ctaButtons.primary.text}</span>
+                                <span class="btn-icon"><i class="${hero.ctaButtons.primary.icon}"></i></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-8 col-sm-10 mx-auto mx-lg-0 mb-4 mb-lg-0 reveal-right">

@@ -5,8 +5,8 @@ const SkillsComponent = {
         // Check if icon is an image path or icon class
         const isImagePath = skill.icon.includes('/') || skill.icon.includes('.png') || skill.icon.includes('.svg') || skill.icon.includes('.jpg');
         const iconHtml = isImagePath 
-            ? `<img src="${skill.icon}" alt="${skill.name}" class="${animationClass}" style="width: 3rem; height: 3rem; object-fit: contain;">`
-            : `<i class="${skill.icon} ${animationClass}" style="font-size: 3rem;"></i>`;
+            ? `<img src="${skill.icon}" alt="${skill.name}" class="skill-icon-img ${animationClass}">`
+            : `<i class="${skill.icon} ${animationClass}"></i>`;
         
         return `
         <div class="col-4 col-md-3 col-lg-2 reveal-bottom skill-item" data-category="${category}" style="transition-delay: ${delay}s;">

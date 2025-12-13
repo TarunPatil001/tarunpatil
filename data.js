@@ -12,14 +12,12 @@ const siteData = {
         lastName: "Patil",
         title: "Java Full-Stack Developer",
         email: "tarunpatil001@gmail.com",
-        phone: "+91 7744845601",
         location: "Pune, Maharashtra, India",
         availability: "Open for opportunities",
         status: "Open to Work", // Shows in hero badge
         statusType: "fulltime", // fulltime, freelance, contract
         profileImage: "assets/images/profile-pic.jpg",
-        resumeLink: "#", // Link to your resume PDF
-        website: "https://tarunpatil.dev"
+        website: "https://tarunpatil.netlify.app/"
     },
 
     // ==========================================
@@ -38,8 +36,7 @@ const siteData = {
         greeting: "Hello, I'm",
         tagline: "Java Full Stack Developer with hands-on experience in building and deploying applications using Java, Spring Boot, React, SQL/NoSQL, Render, Netlify, and Cloudinary.",
         ctaButtons: {
-            primary: { text: "Hire Me", link: "#contact", icon: "fas fa-arrow-right" },
-            secondary: { text: "Download Resume", link: "#", icon: "fas fa-download" }
+            primary: { text: "Hire Me", link: "#contact", icon: "fas fa-arrow-right" }
         },
         floatingIcons: [
             { icon: "fab fa-java", position: "icon-1" },
