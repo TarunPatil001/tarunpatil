@@ -50,7 +50,7 @@ const siteData = {
     // ABOUT SECTION
     // ==========================================
     about: {
-        intro: "Passionate <span class='text-gradient'>Java Full-Stack Developer</span> with hands-on experience in building reliable and scalable web applications.",
+        intro: "Passionate <span class='text-gradient'>Java Full-Stack Developer</span> with hands-on project experience in building reliable and scalable web applications.",
         description: [
             "With a strong foundation in Java and Data Structures & Algorithms, I enjoy working across backend development and interactive frontend interfaces. I am a disciplined and consistent learner who enjoys solving real-world problems through clean and maintainable code.",
         ],
@@ -254,32 +254,39 @@ const siteData = {
     // ==========================================
     certifications: [
         {
+            title: "Certificate of Completion",
+            issuer: "Envision Computer Training Institute, Pune",
+            image: "assets/certificates/envision-java-fullstack.jpg",
+            link: "https://drive.google.com/file/d/1SuMGNX1gVHrAV6wd5eFBvHuoRGNnp8xY/view",
+            date: "Dec 2025"
+        },        
+        {
             title: "Certificate of Appreciation",
             issuer: "EY GDS",
             image: "assets/certificates/ey-gds-certificate-of-appreciation.jpg",
-            link: "#",
-            date: "2023"
+            link: "https://drive.google.com/file/d/1_Irg03dhlEFlCnvzQ86mBSG8QBrh3q6q/view",
+            date: "Apr 2025"
         },        
         {
             title: "Certificate of Merit",
             issuer: "EY GDS",
             image: "assets/certificates/ey-gds-certificate-of-merit.jpg",
-            link: "#",
-            date: "2023"
+            link: "https://drive.google.com/file/d/1dhAUXcqKUJsfvyZEPaYDDeI-ZEE-FVWv/view",
+            date: "Apr 2025"
         },
         {
             title: "Research Publication",
             issuer: "IJSRSET",
             image: "assets/certificates/ijsrset.jpg",
-            link: "#",
-            date: "2022"
+            link: "https://drive.google.com/file/d/1cJ00TD0pN47o1sKficW-rTNjDgI0l8Zz/view",
+            date: "Dec 2023"
         },
         {
             title: "DSA with Java",
             issuer: "Apna College",
             image: "assets/certificates/dsa-with-java-apna-college.jpg",
-            link: "#",
-            date: "2023"
+            link: "https://drive.google.com/file/d/13yDTGGAh7xK4NyjgTBnnLfZjBS_QLIoc/view",
+            date: "2024"
         },
     ],
 

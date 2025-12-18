@@ -4,14 +4,15 @@ const CertificationsComponent = {
         return `
         <div class="col-md-4 col-lg-3 reveal-bottom" style="transition-delay: ${delay}s;">
             <div class="cert-card glass-card text-center p-4">
-                <div class="cert-img-wrapper mb-3">
+                <div class="cert-img-wrapper mb-3" data-link="${cert.link || ''}">
                     <img src="${cert.image}" alt="${cert.title}" class="cert-img">
+                    ${cert.date ? `<span class="cert-date-badge">${cert.date}</span>` : ''}
                     <div class="cert-overlay">
                         <i class="fas fa-eye"></i>
                     </div>
                 </div>
                 <h5>${cert.title}</h5>
-                <p class="small text-muted">${cert.issuer}</p>
+                <p class="small text-muted mb-1">${cert.issuer}</p>
             </div>
         </div>
         `;

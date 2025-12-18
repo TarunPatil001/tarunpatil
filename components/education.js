@@ -9,15 +9,15 @@ const EducationComponent = {
                 <i class="${edu.icon}"></i>
             </div>
             <div class="timeline-content">
-                <div class="timeline-header">
-                    <span class="timeline-date"><i class="fas fa-calendar-alt me-2"></i>${edu.duration}</span>
-                    <span class="timeline-badge"><i class="${gradeIcon} me-1"></i>${edu.grade}</span>
-                </div>
                 <h4 class="timeline-title">${edu.degree}</h4>
                 <div class="timeline-institution-info">
                     ${edu.university ? `<p class="timeline-university"><i class="fas fa-graduation-cap me-2"></i>${edu.university}</p>` : ''}
                     <p class="timeline-institution"><i class="fas fa-building me-2"></i>${edu.institution}</p>
                     <p class="timeline-location"><i class="fas fa-map-marker-alt me-2"></i>${edu.location}</p>
+                    <div class="timeline-header mt-2">
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-2"></i>${edu.duration}</span>
+                        <span class="timeline-badge"><i class="${gradeIcon} me-1"></i>${edu.grade}</span>
+                    </div>
                 </div>
                 <p class="timeline-description">${edu.description}</p>
                 <div class="timeline-tags">

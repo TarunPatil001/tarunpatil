@@ -12,26 +12,53 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('❌ Error initializing components:', error);
     }
     
-    // --- Particle Background ---
+    // --- Particle Background (Mesh) ---
     const canvas = document.getElementById('particles-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+    if (!canvas) {
+        console.warn('⚠️ particles-canvas not found; skipping particle background');
+        return;
     }
-    
+
+    const ctx = canvas.getContext('2d');
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let particles = [];
+    let canvasWidth = 0;
+    let canvasHeight = 0;
+    let resizeTimer = null;
+
+    function resizeCanvas() {
+        const dpr = Math.min(2, window.devicePixelRatio || 1);
+        canvasWidth = window.innerWidth;
+        canvasHeight = window.innerHeight;
+
+        canvas.style.width = canvasWidth + 'px';
+        canvas.style.height = canvasHeight + 'px';
+        canvas.width = Math.floor(canvasWidth * dpr);
+        canvas.height = Math.floor(canvasHeight * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function handleResize() {
+        if (resizeTimer) window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(() => {
+            resizeCanvas();
+            initParticles();
+            if (prefersReducedMotion) {
+                renderParticlesOnce();
+            }
+        }, 150);
+    }
+
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize', handleResize);
     
     class Particle {
         constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 0.5;
-            this.speedX = Math.random() * 0.5 - 0.25;
-            this.speedY = Math.random() * 0.5 - 0.25;
+            this.x = Math.random() * canvasWidth;
+            this.y = Math.random() * canvasHeight;
+            this.size = Math.random() * 2 + 0.6;
+            this.speedX = prefersReducedMotion ? 0 : (Math.random() * 0.5 - 0.25);
+            this.speedY = prefersReducedMotion ? 0 : (Math.random() * 0.5 - 0.25);
             this.opacity = Math.random() * 0.5 + 0.2;
         }
         
@@ -39,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
             this.x += this.speedX;
             this.y += this.speedY;
             
-            if (this.x > canvas.width) this.x = 0;
-            if (this.x < 0) this.x = canvas.width;
-            if (this.y > canvas.height) this.y = 0;
-            if (this.y < 0) this.y = canvas.height;
+            if (this.x > canvasWidth) this.x = 0;
+            if (this.x < 0) this.x = canvasWidth;
+            if (this.y > canvasHeight) this.y = 0;
+            if (this.y < 0) this.y = canvasHeight;
         }
         
         draw() {
@@ -55,34 +82,56 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function initParticles() {
         particles = [];
-        const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 15000));
+        const baseCount = Math.min(110, Math.floor((canvasWidth * canvasHeight) / 15000));
+        const particleCount = prefersReducedMotion ? Math.min(40, baseCount) : baseCount;
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
         }
     }
     
     function connectParticles() {
+        const maxDistance = 130;
+        const maxDistanceSq = maxDistance * maxDistance;
+        const maxLinksPerParticle = 6;
+        const linkCounts = new Array(particles.length).fill(0);
+
         for (let i = 0; i < particles.length; i++) {
+            if (linkCounts[i] >= maxLinksPerParticle) continue;
+
             for (let j = i + 1; j < particles.length; j++) {
+                if (linkCounts[i] >= maxLinksPerParticle) break;
+                if (linkCounts[j] >= maxLinksPerParticle) continue;
+
                 const dx = particles[i].x - particles[j].x;
                 const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 120) {
-                    const opacity = (1 - distance / 120) * 0.3;
+                const distanceSq = dx * dx + dy * dy;
+
+                if (distanceSq < maxDistanceSq) {
+                    const opacity = (1 - distanceSq / maxDistanceSq) * 0.22;
                     ctx.strokeStyle = `rgba(124, 58, 237, ${opacity})`;
-                    ctx.lineWidth = 0.5;
+                    ctx.lineWidth = 0.6;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
                     ctx.stroke();
+
+                    linkCounts[i] += 1;
+                    linkCounts[j] += 1;
                 }
             }
         }
     }
+
+    function renderParticlesOnce() {
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+        particles.forEach(particle => {
+            particle.draw();
+        });
+        connectParticles();
+    }
     
     function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
         particles.forEach(particle => {
             particle.update();
             particle.draw();
@@ -92,7 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     initParticles();
-    animateParticles();
+    if (prefersReducedMotion) {
+        renderParticlesOnce();
+    } else {
+        animateParticles();
+    }
     
     // --- Custom Cursor ---
     const cursor = document.querySelector('.custom-cursor');
@@ -487,6 +540,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (imageModal && modalImg && captionText) {
         certImages.forEach(img => {
             img.addEventListener('click', function() {
+                const wrapper = this.closest('.cert-img-wrapper');
+                const certLink = wrapper?.dataset?.link;
+
+                if (certLink && certLink !== '#') {
+                    window.open(certLink, '_blank', 'noopener,noreferrer');
+                    return;
+                }
+
                 imageModal.style.display = "flex";
                 imageModal.style.flexDirection = "column";
                 imageModal.style.justifyContent = "center";
